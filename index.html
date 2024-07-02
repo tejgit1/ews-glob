@@ -21,29 +21,70 @@
         background-repeat: no-repeat; /* No repeating of the image */
         background-attachment: fixed; /* Fixed position, so it doesn't scroll with the content */
         color: #efefef;
-        font-family: 'Arial', sans-serif;
+        font-family: "Arial", sans-serif;
       }
 
       .navbar-custom {
-        height: 70px;
-        background-color: #7d71d3; /* Dark background for the navbar */
+        background-color: #403e87;
         border: none;
         border-radius: 0;
+        /* height: 60px; */
       }
 
       .navbar-custom .navbar-brand,
       .navbar-custom .navbar-nav > li > a {
-        color: #ffffff; /* Orange color for navbar text */
+        color: #ffffff;
+        font-size: 14px;
       }
 
+      .navbar-brand.lead {
+        color: #e6e361;
+
+        font-size: 20px;
+      }
       .navbar-custom .navbar-nav > li > a:hover {
-        color: #7d71d3; /* White color on hover */
+        color: #403e87;
+      }
+
+      .navbar-toggle .icon-bar {
+        background-color: #ffffff;
+      }
+
+      .navbar-header {
+        padding: 0px 0px; /* Adjust as needed */
+        /* height: 60px; */
       }
 
       .carousel {
         align-items: center;
+        position: relative;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+        background-image: url("images/bgcarousel.jpg"); /* Replace with your image path */
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding-left: 200px;
+      }
+
+      .carousel::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+      }
+
+      .carousel1 {
+        align-items: center;
+        width: 100%;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Semi-transparent black background */
         border-radius: 10px;
         padding-left: 200px;
       }
@@ -57,7 +98,12 @@
         padding-top: 20px;
         padding: 20px; /* Increased padding for cards */
         margin-bottom: 20px; /* Space between cards */
-        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for cards */
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.7
+        ); /* Semi-transparent black background for cards */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
         transition: box-shadow 0.5s ease-in-out; /* Smooth shadow transition on hover */
         border-radius: 10px;
@@ -91,7 +137,7 @@
 
       .carousel-control .glyphicon-chevron-left,
       .carousel-control .glyphicon-chevron-right {
-        color: #7d71d3;
+        color: #c6c0f6;
       }
 
       @media (max-width: 767px) {
@@ -120,21 +166,42 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand lead">Engineering Workshop</a>
+          <a class="navbar-brand lead" href="index.html"
+            >Engineering Workshop</a
+          >
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav navbar-nav lead">
-            <li><a href="Welding.html" target="_self" class="text-uppercase">Welding</a></li>
-            <li><a href="Tinsmithy.html" target="_self" class="text-uppercase">Tinsmithy</a></li>
-            <li><a href="Housewiring.html" target="_self" class="text-uppercase">House Wiring</a></li>
-            <li><a href="Fitting.html" target="_self" class="text-uppercase">Fitting</a></li>
-            <li><a href="Carpentry.html" target="_self" class="text-uppercase">Carpentry</a></li>
+            <li>
+              <a href="Welding.html" target="_self" class="text-uppercase"
+                >Welding</a
+              >
+            </li>
+            <li>
+              <a href="Tinsmithy.html" target="_self" class="text-uppercase"
+                >Tinsmithy</a
+              >
+            </li>
+            <li>
+              <a href="Housewiring.html" target="_self" class="text-uppercase"
+                >House Wiring</a
+              >
+            </li>
+            <li>
+              <a href="Fitting.html" target="_self" class="text-uppercase"
+                >Fitting</a
+              >
+            </li>
+            <li>
+              <a href="Carpentry.html" target="_self" class="text-uppercase"
+                >Carpentry</a
+              >
+            </li>
           </ul>
         </div>
       </div>
     </nav>
-
-    <div class="container" style="padding-top: 70px;">
+    <div class="container" style="padding-top: 70px">
       <!-- Carousel -->
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -150,11 +217,7 @@
         <div class="carousel-inner">
           <div class="item active">
             <a href="Welding.html" target="_self">
-              <img
-                src="images/welding.png"
-                alt="Welding"
-                style="width: 80%"
-              />
+              <img src="images/welding.png" alt="Welding" style="width: 80%" />
             </a>
           </div>
 
@@ -180,11 +243,7 @@
 
           <div class="item">
             <a href="Fitting.html" target="_self">
-              <img
-                src="images/fitting.png"
-                alt="Fitting"
-                style="width: 80%"
-              />
+              <img src="images/fitting.png" alt="Fitting" style="width: 80%" />
             </a>
           </div>
 
@@ -214,11 +273,16 @@
       <!-- Card Section -->
       <div class="row" style="padding-top: 20px">
         <div class="col-md-4 col-sm-6">
-          <div class="card" id="welding" style="background-color: white;">
-            <h2 style="color: #7d71d3;" class="text-uppercase">
-              <i class="fa fa-wrench" aria-hidden="true" style="padding-right: 10px;"></i>Welding
+          <div class="card" id="welding" style="background-color: white">
+            <h2 style="color: #7d71d3" class="text-uppercase">
+              <i
+                class="fa fa-wrench"
+                aria-hidden="true"
+                style="padding-right: 10px"
+              ></i
+              >Welding
             </h2>
-            <p class="lead" style="color: #7d71d3;">
+            <p class="lead" style="color: #7d71d3">
               Welding is a fabrication process whereby two or more parts are
               fused together by means of heat, pressure or both forming a join
               as the parts cool. Welding is usually used on metals and
@@ -228,11 +292,16 @@
         </div>
 
         <div class="col-md-4 col-sm-6">
-          <div class="card" id="tinsmithy" style="background-color: #7d71d3;">
-            <h2 style="color: #ffffff;">
-              <i class="fa fa-cogs" aria-hidden="true" style="padding-right: 10px;"></i>Tinsmithy
+          <div class="card" id="tinsmithy" style="background-color: #7d71d3">
+            <h2 style="color: #ffffff">
+              <i
+                class="fa fa-cogs"
+                aria-hidden="true"
+                style="padding-right: 10px"
+              ></i
+              >Tinsmithy
             </h2>
-            <p class="lead" style="color: #ffffff;">
+            <p class="lead" style="color: #ffffff">
               Tin smithy deals with making of metal boxes, pans, buckets, cans,
               furnaces, funnels, and ducts from flat sheet metal. In this, the
               development is drawn on the sheet metal and cut, and folded to
@@ -242,11 +311,16 @@
         </div>
 
         <div class="col-md-4 col-sm-6">
-          <div class="card" id="housewiring" style="background-color: white;">
-            <h2 style="color: #7d71d3;">
-              <i class="fa fa-bolt" aria-hidden="true" style="padding-right: 10px;"></i>House Wiring
+          <div class="card" id="housewiring" style="background-color: white">
+            <h2 style="color: #7d71d3">
+              <i
+                class="fa fa-bolt"
+                aria-hidden="true"
+                style="padding-right: 10px"
+              ></i
+              >House Wiring
             </h2>
-            <p class="lead" style="color: #7d71d3;">
+            <p class="lead" style="color: #7d71d3">
               Single phase supply consists of one phase wire called hot wire and
               one neutral wire connected in Energy meter by PSPCL as input
               supply 220V. The output 220V supply is taken from Energy meter to
@@ -257,11 +331,16 @@
         </div>
 
         <div class="col-md-4 col-sm-6">
-          <div class="card" id="fitting" style="background-color: #7d71d3;">
-            <h2 style="color: #ffffff;">
-              <i class="fa fa-wrench" aria-hidden="true" style="padding-right: 10px;"></i>Fitting
+          <div class="card" id="fitting" style="background-color: #7d71d3">
+            <h2 style="color: #ffffff">
+              <i
+                class="fa fa-wrench"
+                aria-hidden="true"
+                style="padding-right: 10px"
+              ></i
+              >Fitting
             </h2>
-            <p class="lead" style="color: #ffffff;">
+            <p class="lead" style="color: #ffffff">
               Fitting Shop involves a large number of hand operations to finish
               the work to desired shape, size, and accuracy. The various
               operations performed are marking, chipping, sawing, filing,
@@ -272,11 +351,16 @@
         </div>
 
         <div class="col-md-4 col-sm-6">
-          <div class="card" id="carpentry" style="background-color: white;">
-            <h2 style="color: #7d71d3;">
-              <i class="fa fa-tree" aria-hidden="true" style="padding-right: 10px;"></i>Carpentry
+          <div class="card" id="carpentry" style="background-color: white">
+            <h2 style="color: #7d71d3">
+              <i
+                class="fa fa-tree"
+                aria-hidden="true"
+                style="padding-right: 10px"
+              ></i
+              >Carpentry
             </h2>
-            <p class="lead" style="color: #7d71d3;">
+            <p class="lead" style="color: #7d71d3">
               Carpentry may be defined as the process of making wooden goods and
               components, viz. roofs, floors, partitions, doors, etc., with the
               help of carpentry tools. It starts from a marketable form of wood
@@ -294,3 +378,4 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </body>
 </html>
+
