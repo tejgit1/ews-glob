@@ -3,7 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welding Overview</title>
+    <title>Welding Overview</title>    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome CSS for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -15,15 +25,47 @@
       }
 
       header {
-        background-color: #000000;
+        background-color: #403e87;
         color: #fff;
         padding: 10px 0;
         text-align: center;
       }
 
+      .navbar-custom {
+        background-color: #403e87;
+        border: none;
+        border-radius: 0;
+        /* height: 60px; */
+      }
+
+      .navbar-custom .navbar-brand,
+      .navbar-custom .navbar-nav > li > a {
+        color: #ffffff;
+        font-size: 14px;
+      }
+
+      .navbar-brand.lead {
+        color: #e6e361;
+
+        font-size: 20px;
+      }
+      .navbar-custom .navbar-nav > li > a:hover {
+        color: #403e87;
+
+      }
+
+      .navbar-toggle .icon-bar {
+        background-color: #ffffff;
+      }
+
+      .navbar-header {
+        padding: 0px 0px; /* Adjust as needed */
+        /* height: 60px; */
+      }
+
       .container {
         max-width: 800px;
-        margin: 20px auto;
+        margin: 40px auto;
         padding: 20px;
         background-color: #fff;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -59,10 +101,53 @@
     </style>
   </head>
   <body>
-    <header>
-      <h1>Engineering Workshop: Welding</h1>
-    </header>
-
+    <!-- Navbar -->
+    <nav class="navbar navbar-custom navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#navbar-collapse"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand lead" href="index.html">Engineering Workshop</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav lead">
+            <li>
+              <a href="Welding.html" target="_self" class="text-uppercase"  style="background-color: #403e87;"
+                >Welding</a
+              >
+            </li>
+            <li>
+              <a href="Tinsmithy.html" target="_self" class="text-uppercase" style="background-color: #403e87;"
+                >Tinsmithy</a
+              >
+            </li>
+            <li>
+              <a href="Housewiring.html" target="_self" class="text-uppercase" style="background-color: #403e87;"
+                >House Wiring</a
+              >
+            </li>
+            <li>
+              <a href="Fitting.html" target="_self" class="text-uppercase" style="background-color: #403e87;"
+                >Fitting</a
+              >
+            </li>
+            <li>
+              <a href="Carpentry.html" target="_self" class="text-uppercase" style="background-color: #403e87;"
+                >Carpentry</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <div class="container">
       <div class="section">
         <div class="section-header">
@@ -142,5 +227,9 @@
         <a href="index.html" target="_self"> <p>Back</p></a>
       </div>
     </div>
+    <!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </body>
 </html>
