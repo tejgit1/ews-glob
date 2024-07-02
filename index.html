@@ -9,44 +9,111 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
     />
+    <!-- Font Awesome CSS for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <style>
       /* Custom styles */
       body {
-      background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDQ0NDQ0NDQ0NCA0HCA0NDQ8IDQcNFREWFhURExMYHSggGBolGxMTITEhJSkrLjouFx8zODMsNygtLisBCgoKDg0NFQ8PFysZFRkrKysrKysrLSstKysrNy0rKysrLSstLS0rKy0rNysrKzcrNy0rKysrKy03KysrLSsrK//AABEIALcBEwMBIgACEQEDEQH/xAAaAAADAQEBAQAAAAAAAAAAAAABAgMABAUG/8QAJxABAAMBAQACAQQBBQEAAAAAAAECERIDEyFhMUFRcQSBkaGx8FL/xAAZAQADAQEBAAAAAAAAAAAAAAAAAQIDBAb/xAAgEQEBAAMAAwACAwAAAAAAAAAAAQIREgMTITFRIjJB/9oADAMBAAIRAxEAPwD7sWwceW09E0GgIg8QqRNNVSpKwpWGuMZ5KVS/yIWrBPeGmU/izxv8nLAjFR5YSNtlE3IxT8K0WyYOKfHP8BNRzR0TGw/LcjQ2TBNyPB8ltT/En7n81Xs5/OkxMS6pprfx750xz11tCycrWonaqcpTlTkqk1Lyz002nYqkwE1TYqUhZhTluE8ntLG5dEeRorB+sduSaSSau/mCz5xIviE8jhCKTP6RM/8AL0a/4cR9z9/g/wChei/78Hun+PM+C/8A8z/sz0uhP0Y/se6/pycty6Pjb41cJ7Qip4qpFDxVUwK5ErVSKmip4q1xxZ3IsQj7Oi30jMaM580WP7SioxVTk1KImCrkWvn/ACfDzAY050jZMbD42DQ2lNG5WwORwfScU1WvnitaNMLmGkXPacwNbYaYDD0Wx2JTtU2Bgv0RKalmq01LyzuLSZI8hyvyHKeT6Q5PFT8jhTE+k8DFMbkcjaavhX73+A5W8q/X+q8cfqcsvghPjqkQp+zbnf5Y9a/CMeUMaWGoe65KqRBp82iuM5jpdux+PQ4PUbq5id0kVGfoPtsAJP23J+RipcntPk9YNyatTmJXImByrFRmquU9Jctyry2DkdJ8mrU/JqwqYlcgwOVYq2L5R0jMBi/JZom4nMkeW5V5bkuT6R5DhblpqOT6R5LNV+QmqeT6R5CarchNS5PpHkZhTluS5PpLFvH9C8mpGHjNUsruHwRmGxqzTlhlkKCINNDxQ8VXMU3JCKmtX6V4a8fR8/C6+uaKjypFR5TyrpPkYqpyaKHMC6S5GKK8jEL5T0TkOVcbD5LafIcrRVuRwXSXI1hTluT5HQTAYpjYrSdp40wpjYOT2ljcqxUcLkdJcByrgYORtGaBytjTVPJ9IchytgYXKukZq3K2Fmpcn0ly2K8hyXI6LAyOEmR+AEsAoU6uBiFC2dfOnPsuEmNPjYmw0+Rih4qpECYi5JcDikwGK5LaeDEGxsLQ2XBiDYMQehsIgcGIHFaTtPGw2MWj2XBHGwaANgiNAIgcNENitJ2SYLimBhaPZMbDhhaPacwGHmAxNh7LjYbGGj2njTB8CYTo9pzCcwtMBMIsVKjyyvLJ5V068LMDoOqucuNLTIJUasGCoqiaMlMWRQzMIDDAGgybGlm0yABAjZmYjbDRAQY4VZsGGUkMDBYjDC4YJIyyAyWZTVCEhoTJbPQhja2pNsDB0NAblm6AvhqdBMk6CJ+z6LR4HQmSzYbGlayZCLKRdUyKw8k0JsXRaJD6Ok1psNjSmjqMWP0JkWj62k6LNj6GlNCZJ0XorkfKujqMWN0UyHKoxKcWNq5U2KQJIkypUiEhMlmRacgzJJkJsSbIuSpDTYs3TmwTLK5NJifW1Loek9Hyfpuk+g0uj5ViW1Ppuj6GlNZPWGxpux85/X+nP0byv9/39M5n9Xcfi1rEn0C6UyMsrBMVo9W+SXP0bU9q5Xj1lvmQ0s2HspcR0fK3yOfss+hew+HZHoaLuKvopHoqeQr43TNw7c9vQkeovkKeN1zcs3Q7LNxfIcwdEXUi7i7NX1wp5BfG7YspFnLT0if3UizfHNlcXRFh7c8+sR+6dvbVeyRPG3VPoWbub5An0RfIr1r29E7XSm5JuzvkXMFos02SpZpsXXxXI2sHaV7J9srnpcw26e27c/yDHoPYfDoiw9uf5A7P2Fwv8jIdMXZ8DoxJRTs14v1H5/clk9b5f5hdy3+UzH9C2h3DTKVNNizcJJKLaqRrXL0WxdZXKtJFosaLpQ0SqZUuVpsjPp9te305+k55njg7a300y4qemOmltVjntOWGh6bokyGjo9LRcfkc82Dsdlw6vkH5HH8gxc/aPW6+27c3yD2fsLhfsOkehiR2OXR5W+8NZzxK9Ldf2vHLfxGU19JdzWl1ekOa1WfkXgTTVkOQ39v/AEM2h5sMWIMHsaPrEYbLTqwcPyMVdPLDacwnMLXgsQVhyp4eB5aIKQbLMEmHRhLUFxEyc1oJMOmaEmjK4NJkSsfQ8mrGD6fR6+Df1y+9kNWvXS8ObKW1vjZISq0WyNCtUfW+/Ufp/wBj+s2P7VWPU3yOXW6T7KriOifROfRKbFmybmcwW7NF3N0MWKZq4dUWGLI1upVpMmdikSeJThSsNMWdUqeC1gbWbRnWv7T+n6kn1/DcjwVuVOSRG15n8f0Wkfa/xtHmjm7V1NNy3KtKm4acM+kMZXlj4Pp28BMKSGOyxybR5HhXkeU8H0jyHK/LcnwOnPNWXmpZom4n0jMwna0LWojejPKVpjYh6X/hLqV5oXhz5StpYn3+C29I/hXgJ802VUscvpaZ/pKYddvNO1GOWFa45RzAtahZqzuLSVKSypNSzVFlVKnBoHDRVMh7CFKXkIqeKtMZYi2KV9Fa+iNaLUo3x2xy0eLTKlaj5+bop5unHC1hllInWikea9fNSvm6MfEwy8jl+JvidseYT5r9SfY4uMNEOi1CTVPGj72nwx+WHJ7UZmaMzQzMZMzMA0llmFBbI2hmZ5NMU7QXlmY2NZR5LNWYrDhZqlajMzykXKnaic0FmNkaykmhZozM7IuUOB4Zk6h7NFTxUWaYxNqlaLUozN8JGOVdHnR0UqzOzCRy51elFYqDOrGOfKm5CYZlWJTtCcwzMsmkDAZma3//2Q==');
-      background-size: cover; /* Cover the entire background */
-      background-repeat: no-repeat; /* No repeating of the image */
-      background-attachment: fixed; /* Fixed position, so it doesn't scroll with the content */
-    }
+        background-size: cover; /* Cover the entire background */
+        background-repeat: no-repeat; /* No repeating of the image */
+        background-attachment: fixed; /* Fixed position, so it doesn't scroll with the content */
+        color: #efefef;
+        font-family: 'Arial', sans-serif;
+      }
+
+      .navbar-custom {
+        height: 70px;
+        background-color: #7d71d3; /* Dark background for the navbar */
+        border: none;
+        border-radius: 0;
+      }
+
+      .navbar-custom .navbar-brand,
+      .navbar-custom .navbar-nav > li > a {
+        color: #ffffff; /* Orange color for navbar text */
+      }
+
+      .navbar-custom .navbar-nav > li > a:hover {
+        color: #7d71d3; /* White color on hover */
+      }
+
       .carousel {
+        align-items: center;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+        border-radius: 10px;
         padding-left: 200px;
-        background-color: #ff880088; /* Light cyan background for carousel */
+      }
+
+      .carousel-inner img {
+        align-items: center;
+        border-radius: 10px;
       }
 
       .card {
         padding-top: 20px;
         padding: 20px; /* Increased padding for cards */
         margin-bottom: 20px; /* Space between cards */
-        background-color: #f17624b1; /* Light gray background for cards */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for cards */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
         transition: box-shadow 0.5s ease-in-out; /* Smooth shadow transition on hover */
+        border-radius: 10px;
+        line-height: 1.6; /* Increased line height for better readability */
       }
 
       .card:hover {
-        box-shadow: 0 8px 16px #c76c1cd2; /* Increased shadow on hover */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Increased shadow on hover */
       }
 
-      h2 {
+      .card h3 {
+        display: flex;
+        align-items: center;
+      }
+
+      h1 {
         text-align: center;
         margin-bottom: 30px; /* Space below heading */
+        font-size: 3em;
+        color: #ff8800;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      h3 {
+        color: #f17624;
+      }
+
+      .carousel-control {
+        background-image: none;
+      }
+
+      .carousel-control .glyphicon-chevron-left,
+      .carousel-control .glyphicon-chevron-right {
+        color: #7D71D3;
       }
     </style>
   </head>
 
   <body>
-    <div class="container">
-      <!-- Heading -->
-      <h2>Engineering Workshop</h2>
+    <!-- Navbar -->
+    <nav class="navbar navbar-custom navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand lead">Engineering Workshop</a>
+        </div>
+        <ul class="nav navbar-nav lead" >
+          <li><a href="Welding.html" target="_self" class="text-uppercase">Welding</a></li>
+          <li><a href="Tinsmithy.html" target="_self" class="text-uppercase">Tinsmithy</a></li>
+          <li><a href="Housewiring.html" target="_self" class="text-uppercase">House Wiring</a></li>
+          <li><a href="Fitting.html" target="_self" class="text-uppercase">Fitting</a></li>
+          <li><a href="Carpentry.html" target="_self" class="text-uppercase">Carpentry</a></li>
+        </ul>
+      </div>
+    </nav>
 
+    <div class="container">
       <!-- Carousel -->
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -61,9 +128,9 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
           <div class="item active">
-            <a href="Welding.html" target="_blank">
+            <a href="Welding.html" target="_self">
               <img
-                src="images\welding.png"
+                src="images/welding.png"
                 alt="Welding"
                 style="width: 80%"
               />
@@ -73,7 +140,7 @@
           <div class="item">
             <a href="Tinsmithy.html" target="_blank">
               <img
-                src="images\tinsmithy.png"
+                src="images/tinsmithy.png"
                 alt="Tinsmithy"
                 style="width: 80%"
               />
@@ -83,7 +150,7 @@
           <div class="item">
             <a href="Housewiring.html" target="_blank">
               <img
-                src="images\housewiring.png"
+                src="images/housewiring.png"
                 alt="House Wiring"
                 style="width: 80%"
               />
@@ -93,7 +160,7 @@
           <div class="item">
             <a href="Fitting.html" target="_blank">
               <img
-                src="images\fitting.png"
+                src="images/fitting.png"
                 alt="Fitting"
                 style="width: 80%"
               />
@@ -103,7 +170,7 @@
           <div class="item">
             <a href="Carpentry.html" target="_blank">
               <img
-                src="images\carpentry.png"
+                src="images/carpentry.png"
                 alt="Carpentry"
                 style="width: 80%"
               />
@@ -126,9 +193,11 @@
       <!-- Card Section -->
       <div class="row" style="padding-top: 20px">
         <div class="col-md-2.5">
-          <div class="card">
-            <h3>Welding</h3>
-            <p>
+          <div class="card" id="welding" style="background-color: white;">
+            <h2 style="color: #7D71D3;" class="text-uppercase">
+              <i class="fa fa-wrench" aria-hidden="true" style="padding-right: 10px;"></i>Welding
+            </h2>
+            <p class="lead" style="color: #7D71D3;">
               Welding is a fabrication process whereby two or more parts are
               fused together by means of heat, pressure or both forming a join
               as the parts cool. Welding is usually used on metals and
@@ -138,9 +207,12 @@
         </div>
 
         <div class="col-md-2.5">
-          <div class="card">
-            <h3>Tinsmithy</h3>
-            <p>
+          <div class="card" id="tinsmithy" style="background-color: #7D71D3;">
+            <h2 style="color: #ffffff;"
+            >
+              <i class="fa fa-cogs" aria-hidden="true" style="padding-right: 10px;"></i>Tinsmithy
+            </h2>
+            <p class="lead" style="color: #ffffff;">
               Tin smithy deals with making of metal boxes, pans, buckets, cans,
               furnaces, funnels. and ducts from flat sheet metal. In this, the
               development is drawn on the sheet metal and cut. and folded to
@@ -150,9 +222,11 @@
         </div>
 
         <div class="col-md-2.5">
-          <div class="card">
-            <h3>House Wiring</h3>
-            <p>
+          <div class="card" id="housewiring" style="background-color: white;">
+            <h2 style="color: #7D71D3;">
+              <i class="fa fa-bolt" aria-hidden="true"  style="padding-right: 10px;"></i>House Wiring
+            </h2>
+            <p class="lead" style="color: #7D71D3;">
               Single phase supply consists of one phase wire called hot wire and
               one neutral wire connected in Energy meter by PSPCL as input
               supply 220V. The output 220V supply is taken from Energy meter to
@@ -163,9 +237,11 @@
         </div>
 
         <div class="col-md-2.5">
-          <div class="card">
-            <h3>Fitting</h3>
-            <p>
+          <div class="card" id="fitting" style="background-color: #7D71D3;">
+            <h2 style="color: #ffffff;">
+              <i class="fa fa-wrench" aria-hidden="true"  style="padding-right: 10px;"></i>Fitting
+            </h2>
+            <p class="lead" style="color: #ffffff;">
               Fitting Shop: Fitting Shop involves a large number of hand
               operations to finish the work to desired shape, size and accuracy.
               The various operations performed are marking, chipping, sawing,
@@ -176,9 +252,11 @@
         </div>
 
         <div class="col-md-2.5">
-          <div class="card">
-            <h3>Carpentry</h3>
-            <p>
+          <div class="card" id="carpentry" style="background-color: white;">
+            <h2 style="color: #7D71D3;">
+              <i class="fa fa-tree" aria-hidden="true"  style="padding-right: 10px;"></i>Carpentry
+            </h2>
+            <p class="lead" style="color: #7D71D3;">
               Carpentry may be defined as the process of making wooden goods and
               components, viz. roofs, floors, partitions, doors, etc., with the
               help of carpentry tools. It starts from a marketable form of wood
