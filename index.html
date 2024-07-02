@@ -91,7 +91,16 @@
 
       .carousel-control .glyphicon-chevron-left,
       .carousel-control .glyphicon-chevron-right {
-        color: #7D71D3;
+        color: #7d71d3;
+      }
+
+      @media (max-width: 767px) {
+        .carousel {
+          padding-left: 0;
+        }
+        .card h2 {
+          font-size: 1.5em;
+        }
       }
     </style>
   </head>
@@ -101,19 +110,31 @@
     <nav class="navbar navbar-custom navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#navbar-collapse"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
           <a class="navbar-brand lead">Engineering Workshop</a>
         </div>
-        <ul class="nav navbar-nav lead" >
-          <li><a href="Welding.html" target="_self" class="text-uppercase">Welding</a></li>
-          <li><a href="Tinsmithy.html" target="_self" class="text-uppercase">Tinsmithy</a></li>
-          <li><a href="Housewiring.html" target="_self" class="text-uppercase">House Wiring</a></li>
-          <li><a href="Fitting.html" target="_self" class="text-uppercase">Fitting</a></li>
-          <li><a href="Carpentry.html" target="_self" class="text-uppercase">Carpentry</a></li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav lead">
+            <li><a href="Welding.html" target="_self" class="text-uppercase">Welding</a></li>
+            <li><a href="Tinsmithy.html" target="_self" class="text-uppercase">Tinsmithy</a></li>
+            <li><a href="Housewiring.html" target="_self" class="text-uppercase">House Wiring</a></li>
+            <li><a href="Fitting.html" target="_self" class="text-uppercase">Fitting</a></li>
+            <li><a href="Carpentry.html" target="_self" class="text-uppercase">Carpentry</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
 
-    <div class="container">
+    <div class="container" style="padding-top: 70px;">
       <!-- Carousel -->
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -138,7 +159,7 @@
           </div>
 
           <div class="item">
-            <a href="Tinsmithy.html" target="_blank">
+            <a href="Tinsmithy.html" target="_self">
               <img
                 src="images/tinsmithy.png"
                 alt="Tinsmithy"
@@ -148,7 +169,7 @@
           </div>
 
           <div class="item">
-            <a href="Housewiring.html" target="_blank">
+            <a href="Housewiring.html" target="_self">
               <img
                 src="images/housewiring.png"
                 alt="House Wiring"
@@ -158,7 +179,7 @@
           </div>
 
           <div class="item">
-            <a href="Fitting.html" target="_blank">
+            <a href="Fitting.html" target="_self">
               <img
                 src="images/fitting.png"
                 alt="Fitting"
@@ -168,7 +189,7 @@
           </div>
 
           <div class="item">
-            <a href="Carpentry.html" target="_blank">
+            <a href="Carpentry.html" target="_self">
               <img
                 src="images/carpentry.png"
                 alt="Carpentry"
@@ -192,12 +213,12 @@
 
       <!-- Card Section -->
       <div class="row" style="padding-top: 20px">
-        <div class="col-md-2.5">
+        <div class="col-md-4 col-sm-6">
           <div class="card" id="welding" style="background-color: white;">
-            <h2 style="color: #7D71D3;" class="text-uppercase">
+            <h2 style="color: #7d71d3;" class="text-uppercase">
               <i class="fa fa-wrench" aria-hidden="true" style="padding-right: 10px;"></i>Welding
             </h2>
-            <p class="lead" style="color: #7D71D3;">
+            <p class="lead" style="color: #7d71d3;">
               Welding is a fabrication process whereby two or more parts are
               fused together by means of heat, pressure or both forming a join
               as the parts cool. Welding is usually used on metals and
@@ -206,27 +227,26 @@
           </div>
         </div>
 
-        <div class="col-md-2.5">
-          <div class="card" id="tinsmithy" style="background-color: #7D71D3;">
-            <h2 style="color: #ffffff;"
-            >
+        <div class="col-md-4 col-sm-6">
+          <div class="card" id="tinsmithy" style="background-color: #7d71d3;">
+            <h2 style="color: #ffffff;">
               <i class="fa fa-cogs" aria-hidden="true" style="padding-right: 10px;"></i>Tinsmithy
             </h2>
             <p class="lead" style="color: #ffffff;">
               Tin smithy deals with making of metal boxes, pans, buckets, cans,
-              furnaces, funnels. and ducts from flat sheet metal. In this, the
-              development is drawn on the sheet metal and cut. and folded to
+              furnaces, funnels, and ducts from flat sheet metal. In this, the
+              development is drawn on the sheet metal and cut, and folded to
               form the required shape of the object.
             </p>
           </div>
         </div>
 
-        <div class="col-md-2.5">
+        <div class="col-md-4 col-sm-6">
           <div class="card" id="housewiring" style="background-color: white;">
-            <h2 style="color: #7D71D3;">
-              <i class="fa fa-bolt" aria-hidden="true"  style="padding-right: 10px;"></i>House Wiring
+            <h2 style="color: #7d71d3;">
+              <i class="fa fa-bolt" aria-hidden="true" style="padding-right: 10px;"></i>House Wiring
             </h2>
-            <p class="lead" style="color: #7D71D3;">
+            <p class="lead" style="color: #7d71d3;">
               Single phase supply consists of one phase wire called hot wire and
               one neutral wire connected in Energy meter by PSPCL as input
               supply 220V. The output 220V supply is taken from Energy meter to
@@ -236,27 +256,27 @@
           </div>
         </div>
 
-        <div class="col-md-2.5">
-          <div class="card" id="fitting" style="background-color: #7D71D3;">
+        <div class="col-md-4 col-sm-6">
+          <div class="card" id="fitting" style="background-color: #7d71d3;">
             <h2 style="color: #ffffff;">
-              <i class="fa fa-wrench" aria-hidden="true"  style="padding-right: 10px;"></i>Fitting
+              <i class="fa fa-wrench" aria-hidden="true" style="padding-right: 10px;"></i>Fitting
             </h2>
             <p class="lead" style="color: #ffffff;">
-              Fitting Shop: Fitting Shop involves a large number of hand
-              operations to finish the work to desired shape, size and accuracy.
-              The various operations performed are marking, chipping, sawing,
-              filing, scraping, drilling, tap (Internal threading) and die
-              (External threading).
+              Fitting Shop involves a large number of hand operations to finish
+              the work to desired shape, size, and accuracy. The various
+              operations performed are marking, chipping, sawing, filing,
+              scraping, drilling, tap (Internal threading) and die (External
+              threading).
             </p>
           </div>
         </div>
 
-        <div class="col-md-2.5">
+        <div class="col-md-4 col-sm-6">
           <div class="card" id="carpentry" style="background-color: white;">
-            <h2 style="color: #7D71D3;">
-              <i class="fa fa-tree" aria-hidden="true"  style="padding-right: 10px;"></i>Carpentry
+            <h2 style="color: #7d71d3;">
+              <i class="fa fa-tree" aria-hidden="true" style="padding-right: 10px;"></i>Carpentry
             </h2>
-            <p class="lead" style="color: #7D71D3;">
+            <p class="lead" style="color: #7d71d3;">
               Carpentry may be defined as the process of making wooden goods and
               components, viz. roofs, floors, partitions, doors, etc., with the
               help of carpentry tools. It starts from a marketable form of wood
